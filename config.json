@@ -1,0 +1,772 @@
+#profile-title: XenoVPN
+#profile-support: https://t.me/xxahalok
+{
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "1.0.0.1"
+    ],
+    "queryStrategy": "UseIP"
+  },
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "protocol": ["bittorrent"],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:2ip.ru",
+          "domain:2ip.io",
+          "domain:whoer.net",
+          "domain:yoomoney.ru",
+          "domain:browserleaks.com"
+        ],
+        "outboundTag": "proxy"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "geosite:category-ru",
+          "domain:ru",
+          "domain:su"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "127.0.0.0/8",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.168.0.0/16",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "type": "field",
+        "outboundTag": "direct"
+      }
+    ],
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true,
+        "auth": "noauth"
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": ["http", "tls", "quic"]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false,
+        "auth": "noauth"
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": ["http", "tls", "quic"]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "🇳🇱 Нидерланды | 1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "freeshka.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "0062d039-a9d6-4010-b6c5-2c88a3cf1a6e",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "freeshka.i-love-russia.online",
+          "publicKey": "Tm50a8xPW6cazNhgmTSHNbVfqaplvNSx0BQoJCGe3jU",
+          "shortId": "4aa753c327e7fd94",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 Нидерланды | 2",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "freeshka.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "0062d039-a9d6-4010-b6c5-2c88a3cf1a6e"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "freeshka.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "by.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "by.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия (Ai, YouTube, Gemini)",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "by.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "by.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 1 (Ai, YouTube, Gemini)",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "by.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "by.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 1 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "by.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "by.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Германия 1 (Ai, YouTube, Gemini)",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "by.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "by.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Германия 1 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "by.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "by.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ee.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ee.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "tr.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "tr.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 1 | Игровой 🔥 ^~2~^",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "ee.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "ee.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 2 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "nl.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "nl.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Эстония 3 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "tr.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "tr.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Германия 1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "pl.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "pl.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Германия 2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "in.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "in.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Германия 1 | Игровой 🔥 ^~2~^",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "de2.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "de2.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Германия 2 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "in.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "in.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия 1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "fi.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fi.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия 2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "fi2.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "fi2.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия 3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "de.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "de.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия 1 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "fi.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "fi.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия 2 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "fi2.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "fi2.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Финляндия 3 | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "de.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "de.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Литва",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "lt.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "lt.i-love-russia.online",
+          "publicKey": "ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY",
+          "shortId": "1b4e086bf0a1b1f4",
+          "spiderX": "/",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Литва | Игровой 🔥",
+      "protocol": "hysteria",
+      "settings": {
+        "address": "lt.i-love-russia.online",
+        "port": 443,
+        "version": 2
+      },
+      "streamSettings": {
+        "network": "hysteria",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "f53aa17e-c671-450e-ac86-71311b6dd572"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "lt.i-love-russia.online",
+          "enableSessionResumption": false,
+          "fingerprint": "firefox",
+          "alpn": ["h3"]
+        }
+      }
+    },
+    {
+      "tag": "🇱🇻 Латвия",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "lv.i-love-russia.online",
+            "port": 443,
+            "users": [
+              {
+                "id": "f53aa17e-c671-450e-ac86-71311b6dd572",
+                "enc
