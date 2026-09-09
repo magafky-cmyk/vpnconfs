@@ -4,12 +4,9 @@
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 
+# Белый список: прямые подключения для RU-доменов и сервисов (мимо VPN)
+#route-rules: geosite:category-gov-ru->direct, geosite:yandex->direct, geoip:ru->direct
 
-
-vless://f53aa17e-c671-450e-ac86-71311b6dd572@friendlynode.site:443?type=ws&security=tls&fp=firefox&alpn=http/1.1&sni=friendlynode.site&host=friendlynode.site&path=%2Fstream%2F751394%2Fsocket#🇵🇱%20Белые%20списки%201
-vless://f53aa17e-c671-450e-ac86-71311b6dd572@friendlynode.site:443?type=ws&security=tls&fp=firefox&alpn=http/1.1&sni=friendlynode.site&host=friendlynode.site&path=%2Fstream%2F751394%2Fsocket#🇵🇱%20Белые%20списки%202
-vless://f53aa17e-c671-450e-ac86-71311b6dd572@friendlynode.ru:443?type=ws&security=tls&fp=firefox&alpn=http/1.1&sni=friendlynode.ru&host=friendlynode.ru&path=%2Fstream%2F174196d0%2Fsocket#🇳🇱%20Белые%20списки%203
-vless://f53aa17e-c671-450e-ac86-71311b6dd572@friendlynode.ru:443?type=xhttp&security=tls&fp=firefox&alpn=h2,http/1.1&sni=friendlynode.ru&host=friendlynode.ru&path=%2Fapi%2Fv2%2F2aff7e3e&mode=auto#🇳🇱%20Белые%20списки%204
 vless://0062d039-a9d6-4010-b6c5-2c88a3cf1a6e@freeshka.i-love-russia.online:443?type=tcp&security=reality&pbk=Tm50a8xPW6cazNhgmTSHNbVfqaplvNSx0BQoJCGe3jU&fp=firefox&sid=4aa753c327e7fd94&sni=freeshka.i-love-russia.online&flow=xtls-rprx-vision#🇳🇱%20Нидерланды%20|%201
 hysteria2://0062d039-a9d6-4010-b6c5-2c88a3cf1a6e@freeshka.i-love-russia.online:443?insecure=0&sni=freeshka.i-love-russia.online#🇳🇱%20Нидерланды%20|%202
 hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?insecure=0&sni=by.i-love-russia.online#🇫🇮%20Финляндия%20|%20Игровой%20🔥
