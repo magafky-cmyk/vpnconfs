@@ -1,4 +1,5 @@
 #profile-title: XenoVPN
+#profile-description: Лучший впн для всего!
 #support-url: https://t.me/xxahalok
 #profile-update-interval: 1
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
