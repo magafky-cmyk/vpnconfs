@@ -1,0 +1,40 @@
+#profile-title: XenoVPN
+#support-url: https://t.me/xxahalok
+#profile-update-interval: 24
+#subscription-userinfo: upload=0; download=0; total=107374182400; expire=0
+
+vless://0062d039-a9d6-4010-b6c5-2c88a3cf1a6e@freeshka.i-love-russia.online:443?type=tcp&security=reality&pbk=Tm50a8xPW6cazNhgmTSHNbVfqaplvNSx0BQoJCGe3jU&fp=firefox&sid=4aa753c327e7fd94&sni=freeshka.i-love-russia.online&flow=xtls-rprx-vision#🇳🇱%20Нидерланды%20|%201
+hysteria2://0062d039-a9d6-4010-b6c5-2c88a3cf1a6e@freeshka.i-love-russia.online:443?insecure=0&sni=freeshka.i-love-russia.online#🇳🇱%20Нидерланды%20|%202
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?insecure=0&sni=by.i-love-russia.online#🇫🇮%20Финляндия%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=qq&sid=1b4e086bf0a1b1f4&sni=by.i-love-russia.online&flow=xtls-rprx-vision#🇫🇮%20Финляндия%20(Ai,%20YouTube,%20Gemini)
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=qq&sid=1b4e086bf0a1b1f4&sni=by.i-love-russia.online&flow=xtls-rprx-vision#🇪🇪%20Эстония%201%20(Ai,%20YouTube,%20Gemini)
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?insecure=0&sni=by.i-love-russia.online#🇪🇪%20Эстония%201%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=qq&sid=1b4e086bf0a1b1f4&sni=by.i-love-russia.online&flow=xtls-rprx-vision#🇩🇪%20Германия%201%20(Ai,%20YouTube,%20Gemini)
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@by.i-love-russia.online:443?insecure=0&sni=by.i-love-russia.online#🇩🇪%20Германия%201%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@ee.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=ee.i-love-russia.online&flow=xtls-rprx-vision#🇪🇪%20Эстония%202
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@ee.i-love-russia.online:443?insecure=0&sni=ee.i-love-russia.online#🇪🇪%20Эстония%202%20(Fast)
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@tr.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=tr.i-love-russia.online&flow=xtls-rprx-vision#🇪🇪%20Эстония%203
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@tr.i-love-russia.online:443?insecure=0&sni=tr.i-love-russia.online#🇪🇪%20Эстония%203%20(Fast)
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@ee.i-love-russia.online:443?insecure=0&sni=ee.i-love-russia.online#🇪🇪%20Эстония%201%20|%20Игровой%20🔥%20^~2~^
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@nl.i-love-russia.online:443?insecure=0&sni=nl.i-love-russia.online#🇪🇪%20Эстония%202%20|%20Игровой%20🔥
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@tr.i-love-russia.online:443?insecure=0&sni=tr.i-love-russia.online#🇪🇪%20Эстония%203%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@pl.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=pl.i-love-russia.online&flow=xtls-rprx-vision#🇩🇪%20Германия%201
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@in.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=in.i-love-russia.online&flow=xtls-rprx-vision#🇩🇪%20Германия%202
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@de2.i-love-russia.online:443?insecure=0&sni=de2.i-love-russia.online#🇩🇪%20Германия%201%20|%20Игровой%20🔥%20^~2~^
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@in.i-love-russia.online:443?insecure=0&sni=in.i-love-russia.online#🇩🇪%20Германия%202%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@fi.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=fi.i-love-russia.online&flow=xtls-rprx-vision#🇫🇮%20Финляндия%201
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@fi2.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=fi2.i-love-russia.online&flow=xtls-rprx-vision#🇫🇮%20Финляндия%202
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@de.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=de.i-love-russia.online&flow=xtls-rprx-vision#🇫🇮%20Финляндия%203
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@fi.i-love-russia.online:443?insecure=0&sni=fi.i-love-russia.online#🇫🇮%20Финляндия%201%20|%20Игровой%20🔥
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@fi2.i-love-russia.online:443?insecure=0&sni=fi2.i-love-russia.online#🇫🇮%20Финляндия%202%20|%20Игровой%20🔥
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@de.i-love-russia.online:443?insecure=0&sni=de.i-love-russia.online#🇫🇮%20Финляндия%203%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@lt.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=lt.i-love-russia.online&flow=xtls-rprx-vision#🇱🇹%20Литва
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@lt.i-love-russia.online:443?insecure=0&sni=lt.i-love-russia.online#🇱🇹%20Литва%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@lv.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=lv.i-love-russia.online&flow=xtls-rprx-vision#🇱🇻%20Латвия
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@lv.i-love-russia.online:443?insecure=0&sni=lv.i-love-russia.online#🇱🇻%20Латвия%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@ca.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=ca.i-love-russia.online&flow=xtls-rprx-vision#🇨🇦%20Канада
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@ca.i-love-russia.online:443?insecure=0&sni=ca.i-love-russia.online#🇨🇦%20Канада%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@pl.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=pl.i-love-russia.online&flow=xtls-rprx-vision#🇵🇱%20Польша%201
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@pl.i-love-russia.online:443?insecure=0&sni=pl.i-love-russia.online#🇵🇱%20Польша%201%20|%20Игровой%20🔥
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@de2.i-love-russia.online:443?type=tcp&security=reality&pbk=ThYiOQmlRYp3vrb_MAshWmjSxwOOYcstJusgIiiopHY&fp=firefox&sid=1b4e086bf0a1b1f4&sni=de2.i-love-russia.online&flow=xtls-rprx-vision#🇩🇪%20Германия%203
+hysteria2://f53aa17e-c671-450e-ac86-71311b6dd572@de2.i-love-russia.online:443?insecure=0&sni=de2.i-love-russia.online#🇩🇪%20Германия%203%20|%20Игровой%20🔥
