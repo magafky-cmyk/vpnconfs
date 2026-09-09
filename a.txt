@@ -1,0 +1,8 @@
+#profile-title: 🛡️ Premium VPN | Подписка
+#profile-description: Высокая скорость, защита данных и доступы без ограничений. Поддержка: @your_admin
+#support-url: https://t.me/your_channel
+#profile-update-interval: 12
+#subscription-userinfo: upload=0; download=0; total=107374182400; expire=1788941940
+
+# Ниже вставляются сами ссылки VLESS / Hysteria2 / Shadowsocks
+vless://f53aa17e-c671-450e-ac86-71311b6dd572@friendlynode.site:443?type=ws&security=tls&fp=firefox&alpn=http/1.1&sni=friendlynode.site&host=friendlynode.site&path=%2Fstream%2F751394%2Fsocket#🇵🇱%20Белые%20списки%201
