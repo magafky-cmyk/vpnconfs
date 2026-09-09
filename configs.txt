@@ -1,7 +1,7 @@
 #profile-title: XenoVPN
 #support-url: https://t.me/xxahalok
 #profile-update-interval: 1
-#subscription-userinfo: upload=0; download=0; total=107374182400; expire=0
+#subscription-userinfo: upload=0; download=0; total=1; expire=0
 
 # Белый список: прямые подключения для RU-доменов и сервисов (мимо VPN)
 #route-rules: geosite:category-gov-ru->direct, geosite:yandex->direct, geoip:ru->direct
