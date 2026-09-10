@@ -1,4 +1,4 @@
-#profile-title: XenoVPN
+#profile-title: 🔥XenoVPN - лучший ВПН
 #profile-description: Лучший впн для всего!
 #profile-update-interval: 1
 #profile-lock: true
