@@ -3,7 +3,7 @@
 #profile-update-interval: 1
 #profile-auto-update: true
 #update-on-startup: true
-#support-url: https://t.me/xxahalok
+#support-url: https://t.me/xenovpnofficial
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 
 # === СКРЫТЫЕ НАСТРОЙКИ МАРШРУТИЗАЦИИ (ROUTING) ===
