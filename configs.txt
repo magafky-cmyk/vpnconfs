@@ -1,5 +1,5 @@
 #profile-title: 🔥XenoVPN
-#profile-description: Лучший впн для всего!
+#profile-description: https://t.me/xenovpnofficial
 #profile-update-interval: 1
 #profile-lock: true
 #update-on-startup: true
