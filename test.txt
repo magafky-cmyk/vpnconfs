@@ -1,4 +1,4 @@
-#profile-title: 🔥XenoVPN
+#profile-title: 🔥XenoVPN - TEST
 #profile-description: https://t.me/xenovpnofficial
 #profile-update-interval: 1
 #profile-lock: true
