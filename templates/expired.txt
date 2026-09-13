@@ -1,0 +1,11 @@
+#profile-title: 🔥XenoVPN Истек
+#profile-description: https://t.me/xenovpnofficial
+#profile-update-interval: 1
+#profile-lock: true
+#update-on-startup: true
+#profile-auto-update: true
+#support-url: https://t.me/xenovpnofficial
+
+vless://00000000-0000-0000-0000-000000000000@127.0.0.1:443?type=tcp&security=reality#Подписка_истекла_продли_в_@xenovpnofficial_bot
+vless://00000000-0000-0000-0000-000000000000@127.0.0.1:443?type=tcp&security=reality#Подписка_истекла_продли_в_@xenovpnofficial_bot
+vless://00000000-0000-0000-0000-000000000000@127.0.0.1:443?type=tcp&security=reality#Подписка_истекла_продли_в_@@xenovpnofficial_bot
