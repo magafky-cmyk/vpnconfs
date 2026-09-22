@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>XENO VPN</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        :root {
+            --bg-color: #17212b;
+            --text-color: #ffffff;
+            --hint-color: #708499;
+            --button-color: #5288c1;
+            --button-text: #ffffff;
+            --secondary-bg: #232e3c;
+            --section-bg: #1c242e;
+            --accent-text: #6ab2f2;
+            --success: #4cd964;
+            --destructive: #ec3942;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); min-height: 100vh; padding-bottom: 80px; }
+        .header { padding: 20px; text-align: center; border-bottom: 1px solid var(--secondary-bg); }
+        .header h1 { font-size: 22px; font-weight: 700; color: var(--accent-text); }
+        .header p { font-size: 14px; color: var(--hint-color); margin-top: 4px; }
+        .content { padding: 16px; }
+        .card { background-color: var(--section-bg); border-radius: 16px; padding: 20px; margin-bottom: 12px; }
+        .card-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+        .card-subtitle { font-size: 14px; color: var(--hint-color); }
+        .btn { display: block; width: 100%; padding: 14px; border: none; border-radius: 12px; background-color: var(--button-color); color: var(--button-text); font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 12px; }
+        .btn:active { opacity: 0.7; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background-color: var(--section-bg); display: flex; justify-content: space-around; padding: 12px 0; padding-bottom: calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--secondary-bg); z-index: 100; }
+        .nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 4px 16px; cursor: pointer; opacity: 0.6; }
+        .nav-item.active { opacity: 1; color: var(--accent-text); }
+        .nav-item span { font-size: 11px; }
+        .nav-icon { font-size: 20px; }
+        .hidden { display: none !important; }
+        .auth-error { color: var(--destructive); text-align: center; padding: 40px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div id="auth-screen" class="hidden">
+        <div class="auth-error">❌ Открой это приложение через бота в Telegram</div>
+    </div>
 
+    <div id="app" class="hidden">
+        <div class="header">
+            <h1>💎 XENO VPN</h1>
+            <p>Быстрый, стабильный, удобный</p>
+        </div>
+
+        <div class="content">
+            <div id="page-main">
+                <div class="card">
+                    <div class="card-title">👋 Привет, <span id="user-name">друг</span>!</div>
+                    <div class="card-subtitle">Выбери, что тебя интересует</div>
+                </div>
+                <button class="btn" onclick="sendAction('subscriptions')">💎 Подписки</button>
+                <button class="btn" onclick="sendAction('my_sub')">👤 Моя подписка</button>
+                <button class="btn" onclick="sendAction('tasks')">🎯 Задания</button>
+                <button class="btn" onclick="sendAction('referral')">👥 Друзья</button>
+                <button class="btn" onclick="sendAction('sponsors')">🤝 Спонсоры</button>
+                <button class="btn" onclick="sendAction('support')">🆘 Поддержка</button>
+            </div>
+
+            <div id="page-subscriptions" class="hidden">
+                <div class="card">
+                    <div class="card-title">💎 Подписки</div>
+                    <div class="card-subtitle">Выбери тариф в боте</div>
+                </div>
+                <button class="btn" onclick="sendAction('subscriptions')">Открыть подписки</button>
+            </div>
+
+            <div id="page-status" class="hidden">
+                <div class="card">
+                    <div class="card-title">📊 Статус</div>
+                    <div class="card-subtitle">ID: <span id="user-id">—</span></div>
+                </div>
+                <button class="btn" onclick="sendAction('my_sub')">Проверить подписку</button>
+            </div>
+
+            <div id="page-admin" class="hidden">
+                <div class="card">
+                    <div class="card-title">🎛 Панель</div>
+                    <div class="card-subtitle">Доступна в боте</div>
+                </div>
+                <button class="btn" onclick="sendAction('panel')">Открыть панель</button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <div class="nav-item active" onclick="switchPage('main', this)">
+                <span class="nav-icon">🏠</span><span>Главная</span>
+            </div>
+            <div class="nav-item" onclick="switchPage('subscriptions', this)">
+                <span class="nav-icon">💎</span><span>Подписки</span>
+            </div>
+            <div class="nav-item" onclick="switchPage('status', this)">
+                <span class="nav-icon">📊</span><span>Статус</span>
+            </div>
+            <div class="nav-item" onclick="switchPage('admin', this)">
+                <span class="nav-icon">🎛</span><span>Панель</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tg = window.Telegram?.WebApp;
+        const user = tg?.initDataUnsafe?.user;
+
+        if (!tg || !user) {
+            document.getElementById('auth-screen').classList.remove('hidden');
+        } else {
+            tg.ready();
+            tg.expand();
+            document.getElementById('app').classList.remove('hidden');
+            document.getElementById('user-name').innerText = user.first_name || 'друг';
+            document.getElementById('user-id').innerText = user.id;
+        }
+
+        function sendAction(action) {
+            if (!tg) return;
+            tg.sendData(JSON.stringify({ action: action }));
+            tg.close();
+        }
+
+        function switchPage(page, el) {
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            el.classList.add('active');
+            ['main', 'subscriptions', 'status', 'admin'].forEach(p => {
+                document.getElementById('page-' + p).classList.add('hidden');
+            });
+            document.getElementById('page-' + p).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
