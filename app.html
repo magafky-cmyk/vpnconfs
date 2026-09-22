@@ -193,57 +193,26 @@
         </div>
     </div>
 
-    <script>
-        const tg = window.Telegram.WebApp;
+<script>
+    const tg = window.Telegram?.WebApp;
+    console.log("TG объект:", tg);
+
+    if (!tg) {
+        document.body.innerHTML = '<p style="color:white;padding:40px;text-align:center;">❌ Telegram SDK не загрузился. Открой через бота.</p>';
+    } else {
         tg.ready();
         tg.expand();
 
-        const MY_TELEGRAM_ID = 6774699351;
         const user = tg.initDataUnsafe?.user;
+        console.log("User:", user);
 
         if (!user) {
-            document.getElementById('auth-screen').classList.remove('hidden');
+            document.body.innerHTML = '<p style="color:white;padding:40px;text-align:center;">❌ Открой приложение через Telegram-бота.</p>';
         } else {
             document.getElementById('app').classList.remove('hidden');
-            document.getElementById('user-name').innerText = user.first_name || 'друг';
-
-            if (user.id === MY_TELEGRAM_ID) {
-                document.getElementById('admin-nav').classList.remove('hidden');
-            }
-
-            document.getElementById('sub-status').innerText = `ID: ${user.id} • ${user.first_name || ''}`;
-            document.getElementById('status-text').innerText = 'Подписка активна ✅';
+            document.getElementById('auth-screen').classList.add('hidden');
         }
-
-        function applyTheme() {
-            const tp = tg.themeParams;
-            const set = (k, v) => v && document.documentElement.style.setProperty(k, v);
-            set('--bg-color', tp.bg_color);
-            set('--text-color', tp.text_color);
-            set('--hint-color', tp.hint_color);
-            set('--button-color', tp.button_color);
-            set('--button-text', tp.button_text_color);
-            set('--secondary-bg', tp.secondary_bg_color);
-            set('--section-bg', tp.section_bg_color);
-            set('--accent-text', tp.accent_text_color);
-            set('--destructive', tp.destructive_text_color);
-        }
-
-        applyTheme();
-        tg.onEvent('themeChanged', applyTheme);
-
-        function switchPage(page, el) {
-            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-            el.classList.add('active');
-            ['main', 'subscriptions', 'status', 'admin'].forEach(p => {
-                document.getElementById('page-' + p).classList.add('hidden');
-            });
-            document.getElementById('page-' + page).classList.remove('hidden');
-        }
-
-        function closeApp() {
-            tg.close();
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
